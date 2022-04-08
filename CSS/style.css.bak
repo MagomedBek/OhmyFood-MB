@@ -1,0 +1,156 @@
+*
+{
+	margin: 0;
+	list-style-type:none;
+}
+ div,article
+{
+	border:1px solid black;
+}
+img
+{
+	width:100px;
+}
+
+body
+{
+	margin:0;
+	padding:0;
+}
+header
+{
+	display:flex;
+	flex-direction:column;
+	justify-content:flex-start;
+	align-items:stretch;
+	background-color:green;
+}
+header a
+{
+	align-self: center;
+}
+#reservation
+{
+	display:flex;
+	flex-direction:column;
+	text-align:center;
+	background-color:#D3D3D3;
+}
+
+.location
+{
+	background-color:grey;
+}
+
+.description
+{
+	display:flex;
+	flex-direction:column;
+	justify-content:space-around;
+}
+
+.bouton
+{
+	border-radius:50px;
+	background:#EE82EE;
+	padding:15px 30px;
+}
+
+.fonctions
+{
+	list-style: none;
+	counter-reset: my-counter;
+  padding-left: 10px;
+	border:2px solid blue;
+	background-color:black;
+	display:flex;
+	flex-direction:column;
+	justify-content:space-around;
+	gap:10px;
+}
+.fonctions li
+{
+	background-color:#D3D3D3;
+	border:1px solid black;
+	border-radius:20px;
+	counter-increment: my-counter;
+	padding:15px 0px;
+	
+}
+
+.fonctions li::before {
+  content: counter(my-counter) " ";
+  padding-left: 5px;
+  background-color:blue;
+  border-radius:50%;
+  position:relative;
+  left:-5px;
+}
+
+.fonctions li:hover
+{
+	background-color:#EE82EE;
+}
+
+
+main
+{
+	display:flex;
+	flex-direction:column;
+	background-color:darkblue;
+}
+
+#restaurants
+{
+	display:flex;
+	flex-direction:column;
+	justify-content:flex-start;
+	align-items:center;
+	background-color:red;
+	gap:10px;
+	
+}
+.restcard
+{
+	display:flex;
+	flex-direction:column;
+	background-color:blue;
+	width:90%;
+	border-radius:20px;
+	overflow:hidden;
+	
+}
+
+.view
+{
+	width:100%;
+	height:20vh;
+	background-color:coral;
+}
+
+.view .img
+{
+	width:100%;
+	height:100%;
+	object-fit: cover;
+}
+
+.desc
+{
+	display:flex;
+	flex-direction:column;
+	background-color:aqua;
+	
+}
+
+footer
+{
+	display:flex;
+	flex-direction:column;
+	background-color:black;
+	color:white;
+}
+footer ul
+{
+	list-style-type: none;
+}
