@@ -23,23 +23,33 @@ header
 	flex-direction:column;
 	justify-content:flex-start;
 	align-items:stretch;
-	background-color:green;
+	
+	gap:10px;
 }
-header a
+header a, .logo
 {
+	width:60%;
 	align-self: center;
+	text-align: center;
 }
+
+
 #reservation
 {
 	display:flex;
 	flex-direction:column;
 	text-align:center;
-	background-color:#D3D3D3;
+	background-color: #F2F2F2;
 }
 
 .location
 {
-	background-color:grey;
+	background-color:#D3D3D3;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	gap:10px;
+	padding: 1%;
 }
 
 .description
@@ -47,12 +57,21 @@ header a
 	display:flex;
 	flex-direction:column;
 	justify-content:space-around;
+	gap:5px;
 }
 
+#reservation .det
+{
+	display: flex;
+	flex-direction: column;
+	gap:10px;
+	padding: 20px;
+}
 .bouton
 {
 	border-radius:50px;
-	background:#EE82EE;
+	background: linear-gradient(-10deg,  rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
+	color:white;
 	padding:15px 30px;
 }
 #fonctions
@@ -64,18 +83,17 @@ header a
 {
 	list-style: none;
 	counter-reset: my-counter;
-  padding-left: 10px;
-	border:2px solid blue;
-	background-color:black;
+    padding-left: 10px;
 	display:flex;
 	flex-direction:column;
 	justify-content:space-around;
-	gap:10px;
+	gap:15px;
 }
 .fonctions li
 {
-	background-color:#D3D3D3;
-	border:1px solid black;
+	display: flex;
+	gap: 10px;
+	background-color: #F2F2F2;
 	border-radius:20px;
 	counter-increment: my-counter;
 	padding:15px 0px;
@@ -84,8 +102,8 @@ header a
 
 .fonctions li::before {
   content: counter(my-counter) " ";
-  padding-left: 5px;
-  background-color:blue;
+  padding: 1px 5px;
+  background-color:blueviolet;
   border-radius:50%;
   position:relative;
   left:-5px;
@@ -93,43 +111,55 @@ header a
 
 .fonctions li:hover
 {
-	background-color:#EE82EE;
+	background-color:#EE82EE77;
+	
 }
 
+.fonctions li:hover i
+{
+	
+	color: blueviolet;
+}
 
 main
 {
 	display:flex;
-	flex-direction:column;
-	background-color:darkblue;
+	flex-direction:row;
+	background-color:#F2F2F2;
+	
 }
 
 #restaurants
 {
 	display:flex;
 	flex-direction:column;
-	justify-content:flex-start;
+	justify-content:space-around;
 	align-items:center;
-	background-color:red;
-	gap:10px;
 	
+	padding: 5% 0;
 }
+
+
+
 .restcard
 {
 	display:flex;
 	flex-direction:column;
-	background-color:blue;
 	width:90%;
+	height: 100%;
+	max-height: 23%;
 	border-radius:20px;
 	overflow:hidden;
+	background-color: white;
 	
 }
+
 
 .view
 {
 	width:100%;
-	height:20vh;
-	background-color:coral;
+	height:60%;
+	flex:0 1 80%
 }
 
 .view .img
@@ -139,12 +169,35 @@ main
 	object-fit: cover;
 }
 
+.restcard p
+{
+	width: fit-content;
+	background-color: greenyellow;
+	color:green;
+	position: absolute;
+	align-self: flex-end;
+	margin:10px;
+	padding: 5px;
+}
 .desc
 {
 	display:flex;
-	flex-direction:column;
-	background-color:aqua;
+	flex-direction:row;
+	justify-content: space-between;
+	padding: 1%;
+	flex:1 1 auto
+
+}
+
+.fa-heart
+{
+	font-size: 50px;
 	
+}
+
+.fa-heart:hover
+{
+	color: red;
 }
 
 footer
@@ -153,8 +206,53 @@ footer
 	flex-direction:column;
 	background-color:black;
 	color:white;
+	padding: 30px 20px;
+	gap:10px;
 }
-footer ul
+footer .info
 {
 	list-style-type: none;
+	
+}
+
+footer .info li
+{
+	display: flex;
+	gap:10px;
+	position: relative;
+	left: -35px;
+}
+
+@media screen and (min-width: 990px) 
+{
+	body
+	{
+		width: 80%;
+		margin:0 auto;
+	}
+
+	#restaurants
+	{
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-items: flex-start;
+	}
+
+	#restaurants h2
+	{
+		flex-basis: 100%;
+		text-align: center;
+	}
+
+	.restcard
+	{
+		width:40%;
+		max-height: 40%;
+	}
+
+	.restcard .view
+	{
+		
+
+	}
 }
