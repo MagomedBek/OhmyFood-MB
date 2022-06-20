@@ -27,11 +27,22 @@ header
 	gap:10px;
 }
 
+#logo
+{
+	display: flex;
+	flex-direction: row;
+	justify-content:flex-start;
+	align-items: center;
+	gap: 10%;
+	padding: 0 5%;
+}
 
- .logo
+
+
+#logo .logo
 {
 	width:50%;
-	gap:0;
+	
 }
 
 
@@ -352,6 +363,20 @@ footer .info li
 		width: 90%;
 		margin:0 auto;
 	}
+
+	#logo 
+	{
+		justify-content: center;
+		gap:0;
+		
+	}
+
+	#logo .logo
+
+	{
+		width: 100%;
+	}
+
 	#fonctions
 	{
 		display: flex;
