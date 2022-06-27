@@ -2,7 +2,13 @@
 {
 	margin: 0;
 	list-style-type:none;
+	font-family: 'Roboto'
 	
+}
+
+ h2,.logo
+{
+	font-family: 'Shrikhand';
 }
 
 a{
@@ -31,10 +37,8 @@ header
 {
 	display: flex;
 	flex-direction: row;
-	justify-content:flex-start;
+	justify-content:center;
 	align-items: center;
-	gap: 10%;
-	padding: 0 5%;
 }
 
 
@@ -122,7 +126,8 @@ header
   background-color:blueviolet;
   border-radius:50%;
   position:relative;
-  left:-5px;
+  left:-15px;
+  color: white;
 }
 
 .fonctions li:hover
@@ -262,8 +267,8 @@ main
 .restcard p
 {
 	width: fit-content;
-	background-color: greenyellow;
-	color:green;
+	background-color: #99E2D0;
+	color:#178969;
 	position: absolute;
 	align-self: flex-end;
 	margin:10px;
@@ -274,11 +279,16 @@ main
 	display:flex;
 	flex-direction:row;
 	justify-content: space-between;
-	padding: 1%;
+	padding: 3% 2%;
 	flex:1 1 auto
 
 }
 
+.desc ul,.desc .favorit
+{
+	position: relative;
+	left: -5%;
+}
 .fa-heart
 {
 	font-size: 50px;
@@ -360,7 +370,7 @@ footer .info li
 {
 	body
 	{
-		width: 90%;
+		width: 100%;
 		margin:0 auto;
 	}
 
@@ -383,14 +393,14 @@ footer .info li
 		flex-direction: row;
 		align-items: center;
 		justify-content: space-around;
-		
+		gap:5%;
 	}
 
 	.fonctions
 	{
 		flex-direction: row;
 		flex: 1 0 auto;
-		gap:0;
+		gap:10px;
 		padding-left: 0;
 	}
 
